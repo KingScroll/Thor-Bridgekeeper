@@ -181,7 +181,7 @@ public class ControllerCommands : MonoBehaviour
         }
 
         //If Player presses trigger while holding hammer, start power hit
-        if (canPowerHit && triggerClick > 0)
+        if (canPowerHit && triggerClick > 0 && hammerHand)
         {
             if (EmitterLightningHammer.GetComponent<AudioSource>().isPlaying == false)
             {
@@ -189,6 +189,7 @@ public class ControllerCommands : MonoBehaviour
             }
             StartCoroutine(CallPowerHitCooldown());
         }
+
 
         // Lightning Bolt Ability goes here
         if (boltLoopAllowed && canLightningBolt && !hammerHand && gripClick > 0)
@@ -253,7 +254,7 @@ public class ControllerCommands : MonoBehaviour
                 hammerHand = directInteractor;
 
                 //If Player pushes JOYSTICK UP && !isUltimate, Lightning Attack
-                if (!isUltimate && stickVector.y >= 0.93 && canLightningAttack)
+                if (!isUltimate && stickVector.y >= 0.93 && canLightningAttack && hammerHand)
                 {
                     lightning.GetComponent<ParticleSystem>().Play();
                     if (lightning.GetComponent<AudioSource>().isPlaying == false)

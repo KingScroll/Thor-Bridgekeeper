@@ -2067,12 +2067,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Game by Juan Lam
 
-    Music by Max Layland
-
     Hammer & Tree by Quaternius
 
-    Game
-    Icons by Lorc'
+    Game Icons by Lorc'
 --- !u!222 &840419074
 CanvasRenderer:
   m_ObjectHideFlags: 0

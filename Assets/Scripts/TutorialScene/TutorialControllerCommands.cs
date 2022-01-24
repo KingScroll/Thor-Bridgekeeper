@@ -183,7 +183,7 @@ public class TutorialControllerCommands : MonoBehaviour
         }
 
         //If Player presses trigger while holding hammer, start power hit
-        if (canPowerHit && triggerClick > 0)
+        if (canPowerHit && triggerClick > 0 && hammerHand)
         {
             if (EmitterLightningHammer.GetComponent<AudioSource>().isPlaying == false)
             {
