@@ -10,6 +10,7 @@ public class ControllerCommands : MonoBehaviour
     ActionBasedController controller;
     XRDirectInteractor directInteractor;
 
+
     public InputActionProperty velocityProperty;
     public InputActionProperty stickProperty;
     public InputActionProperty primaryButtonProperty;
@@ -99,6 +100,7 @@ public class ControllerCommands : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float difficultyModifier = battleManager.GetComponent<BattleManager>().difficultyModifier;
 
         Velocity = velocityProperty.action.ReadValue<Vector3>(); // Get Controller Velocity
